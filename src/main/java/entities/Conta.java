@@ -2,6 +2,7 @@ package entities;
 
 public class Conta {
 
+
     private int numero;
     private String titular;
     private String cpf;
@@ -51,6 +52,16 @@ public void sacar(double valor) {
     }
     saldo -= valor;
 }
+ public void consultarSaldo() {
 
+     System.out.println("\n==========================");
+     System.out.println("      DADOS DA CONTA");
+     System.out.println("==========================");
+     System.out.println("Titular: " + titular);
+     System.out.println("CPF: " + cpf);
+     System.out.println("Conta: " + numero);
+     System.out.printf("Saldo: R$ %.2f%n", saldo);
+     System.out.println("==========================");
+ }
 }
 
