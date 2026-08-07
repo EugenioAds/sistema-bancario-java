@@ -18,6 +18,7 @@ public Conta(int numero, String titular, double saldo, String cpf) {
 }
 
 
+
     public int getNumero() {
     return numero;
 }
@@ -52,7 +53,7 @@ public void sacar(double valor) {
     }
     saldo -= valor;
 }
- public void consultarSaldo() {
+ public boolean consultarDados() {
 
      System.out.println("\n==========================");
      System.out.println("      DADOS DA CONTA");
@@ -62,6 +63,13 @@ public void sacar(double valor) {
      System.out.println("Conta: " + numero);
      System.out.printf("Saldo: R$ %.2f%n", saldo);
      System.out.println("==========================");
+
+
+     return true;
  }
-}
+
+
+    }
+
+
 
