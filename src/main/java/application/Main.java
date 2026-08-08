@@ -3,6 +3,7 @@ package application;
 import entities.Conta;
 import java.util.Scanner;
 import services.Banco;
+import java.util.Locale;
 
 public class Main {
 
@@ -35,6 +36,7 @@ public class Main {
         );
 
         Scanner sc = new Scanner(System.in);
+        sc.useLocale(Locale.US);
 
         Banco banco = new Banco();
 

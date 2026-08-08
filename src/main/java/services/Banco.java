@@ -13,6 +13,16 @@ public class Banco {
 
     public void cadastrarConta(Conta conta) {
 
+        if (buscarConta(conta.getNumero()) != null) {
+            System.out.println("Erro: já existe uma conta com esse número.");
+            return;
+
+        }
+        if (conta.getSaldo() < 0) {
+            System.out.println("Erro: o saldo inicial não pode ser negativo");
+            return;
+        }
+
         contas.add(conta);
 
         System.out.println("Conta cadastrada com sucesso!");
